@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/loader.css" />
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" href="css/carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/card.css" />
+    <link rel="stylesheet" type="text/css" href="css/game.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://kit.fontawesome.com/3d69177b10.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--╔══════━━━━━━────── • LOADER • ──────━━━━━━══════╗-->
+    <div id="loader">
+        <div class="loader-content">
+            <div id="loader-bar">
+                <img class="loader-img" src="img/biglogo.png" alt="">
+            </div>
+            <img class="loader-img" src="img/biglogo.png" alt="">
+            <h1 class="loader-text">loading
+                <span id="loader-dots">...</span>
+                <h1 class="loader-progress"><span id="loader-number"></span>%</h1>
+        </div>
+    </div>
+
+    <!--╔══════━━━━━━────── • HEADER • ──────━━━━━━══════╗-->
+    <header id="header">
+        <div class="header">
+            <div class="menu-logo">
+                <button id="menu-btn" class="icon-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <img src="img/logo.png" alt="Logo" class="link" data-url="home.html">
+            </div>
+            <div id="search-bar" class="search-bar">
+                <input type="text" placeholder="¡Buscá tu próximo desafío!">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-bell"></i>
+                <i id="user-icon" class="fas fa-user link" data-url="form.html"></i>
+                <img id="user-avatar" src="img/avatar-user.png" alt="user avatar" class="link" data-url="form.html">
+            </div>
+        </div>
+    </header>
+
+    <!--╔══════━━━━━━────── • SIDEBAR • ──────━━━━━━══════╗-->
+    <aside class="sidebar" id="sidebar">
+        <div class="menu-categorias">
+            <a href="home.html" class="menu-item link"><i class="fas fa-home"></i> Inicio</a>
+            <a href="form.html" class="menu-item link"><i class="fas fa-user"></i> Mi cuenta</a>
+            <a id="goto" href="game.html" class="menu-item link"><i class="fas fa-gamepad"></i> Mis juegos</a>
+            <a href="#" class="menu-item"><i class="fas fa-thumbs-up"></i> Populares</a>
+            <a href="#" class="menu-item"><i class="fas fa-users"></i> Multijugador</a>
+            <a href="#" class="menu-item"><i class="fas fa-football-ball"></i> Deportes</a>
+            <a href="#" class="menu-item"><i class="fas fa-paint-brush"></i> Creativos</a>
+            <a href="#" class="menu-item"><i class="fas fa-chess"></i> Cartas</a>
+            <a href="#" class="menu-item"><i class="fas fa-car"></i> Carreras</a>
+            <a href="#" class="menu-item"><i class="fas fa-chess-rook"></i> Tower</a>
+            <!--<a href="#" class="menu-item"><i class="fas fa-bullseye"></i> Disparos</a>
+            <a href="#" class="menu-item"><i class="fas fa-futbol"></i> Fútbol</a>
+            <a href="#" class="menu-item"><i class="fas fa-skull"></i> Terror</a>
+            <a href="#" class="menu-item"><i class="fas fa-compass"></i> Aventura</a>
+            <a href="#" class="menu-item"><i class="fas fa-key"></i> Escape</a>
+            <a href="#" class="menu-item"><i class="fas fa-puzzle-piece"></i> Puzzle</a>
+            <a href="#" class="menu-item"><i class="fas fa-dice"></i> Dados</a>-->
+            <a href="form.html" class="menu-item link"><i class="fas fa-arrow-right-from-bracket"></i> Cerrar sesion</a>
+        </div>
+    </aside>
+
+    <!-- Overlay para opacidad -->
+    <div class="overlay" id="overlay"></div>
+
+    <!--╔══════━━━━━━────── • CONTENT • ──────━━━━━━══════╗-->
+    <main id="content">
+    </main>
+
+    <!--╔══════━━━━━━────── • FAT FOOTER • ──────━━━━━━══════╗-->
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-column">
+                <h2>Explora</h2>
+                <ul>
+                    <li><a href="#">Acción</a></li>
+                    <li><a href="#">Aventura</a></li>
+                    <li><a href="#">Suspenso</a></li>
+                    <li><a href="#">Multijugador</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Acerca de</h2>
+                <ul>
+                    <li><a href="#">Política sobre privacidad</a></li>
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Comunidad</h2>
+                <ul>
+                    <li><a id="footer-a" href="#">Reseñas</a></li>
+                    <li><a id="footer-a" href="#">Blog</a></li>
+                    <li><a id="footer-a" href="#">Noticias</a></li>
+                    <li><a id="footer-a" href="#">Desafíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Social</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instragram.com">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@example.com">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-subscribe">
+            <img src="img/logo2.png" alt="Logo">
+            <label for="subscribe">¿Querés recibir todas las novedades de la web?</label>
+            <input type="email" id="subscribe" placeholder="¡Escribinos tu e-mail!">
+            <button class="button tocheckbutton" onclick="buttonClick(this, 'Suscribite')">
+                    <div class="container">
+                        <div class="tick">Suscribite</div>
+                    </div>
+                </button>
+        </div>
+        <div class="copyright">
+            <p>© 2024 King of Games Inc. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+<script src="js/tile.js"></script>
+<script src="js/dropZone.js"></script>
+<script src="js/board.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/graphics.js"></script>
+<script src="js/gameState.js"></script>
+<script src="js/4enlinea.js"></script>
+<script src="js/render.js"></script>
+
+</html>

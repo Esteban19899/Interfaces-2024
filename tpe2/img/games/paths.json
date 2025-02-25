@@ -1,0 +1,184 @@
+{
+    "images": [
+        {
+            "path": "img/games/4 en linea.png",
+            "name": "Cuatro en Linea!",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/War Ensemble.png",
+            "name": "War Ensemble",
+            "price": "12.99"
+        },
+        {
+            "path": "img/games/Bomberman.png",
+            "name": "Bomberman",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Classic Sonic.png",
+            "name": "Classic Sonic",
+            "price": "9.99"
+        },
+        {
+            "path": "img/games/CR7 Soccer.png",
+            "name": "CR7 Soccer",
+            "price": "25.99"
+        },
+        {
+            "path": "img/games/ParapaRAPPA.png",
+            "name": "ParapaRAPPA",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Firestone.png",
+            "name": "Firestone",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/King of Fighters.png",
+            "name": "King of Fighters",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Mario Kart.png",
+            "name": "Mario Kart",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Plants vs Zombies.png",
+            "name": "Plants vs Zombies",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Pokemon.png",
+            "name": "Pokemon",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Bike MADness.png",
+            "name": "Bike MADness",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Fifa 99.png",
+            "name": "Fifa 99",
+            "price": "2.50"
+        },
+        {
+            "path": "img/games/Sonic Heroes.png",
+            "name": "Sonic Heroes",
+            "price": "3.33"
+        },
+        {
+            "path": "img/games/UNO!.png",
+            "name": "UNO!",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Sonic Youth.png",
+            "name": "Sonic Youth",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Minecrafto.png",
+            "name": "Minecrafto",
+            "price": "15.05"
+        },
+        {
+            "path": "img/games/Presi-Pizza.png",
+            "name": "Presi-Pizza",
+            "price": "2.99"
+        },
+        {
+            "path": "img/games/Dark Super.png",
+            "name": "Dark Super",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/CS Z.png",
+            "name": "CS: Z",
+            "price": "10.00"
+        },
+        {
+            "path": "img/games/Wooder.png",
+            "name": "Wooder",
+            "price": "2.22"
+        },
+        {
+            "path": "img/games/Crash Bandicoot.png",
+            "name": "Crash Bandicoot",
+            "price": "50.01"
+        },
+        {
+            "path": "img/games/Metal-Slug.png",
+            "name": "Metal-Slug",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Yoshi's Adventure.png",
+            "name": "Yoshi's Adventure",
+            "price": "4.99"
+        },
+        {
+            "path": "img/games/Sushi Roll.png",
+            "name": "Sushi Roll",
+            "price": "25.00"
+        },
+        {
+            "path": "img/games/Majong.png",
+            "name": "Majong",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Bad Ice-Cream.png",
+            "name": "Bad Ice-Cream",
+            "price": "2.99"
+        },
+        {
+            "path": "img/games/Tumble Boys.png",
+            "name": "Tumble Boys",
+            "price": "14.55"
+        },
+        {
+            "path": "img/games/Ram Rapper.png",
+            "name": "Ram Rapper",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Texas Hold'em.png",
+            "name": "Texas Hold'em",
+            "price": "39.99"
+        },
+        {
+            "path": "img/games/Surviv.io.png",
+            "name": "Surviv.io",
+            "price": "3.00"
+        },
+        {
+            "path": "img/games/Minecube.png",
+            "name": "Minecube",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Pac-Mania.png",
+            "name": "Pac-Mania",
+            "price": "10.50"
+        },
+        {
+            "path": "img/games/Cato.png",
+            "name": "Cato",
+            "price": "Free!"
+        },
+        {
+            "path": "img/games/Snakeiaous.png",
+            "name": "Snakeiaous",
+            "price": "1.99"
+        },
+        {
+            "path": "img/games/Swated!.png",
+            "name": "Swated!",
+            "price": "0.99"
+        }
+    ]
+}

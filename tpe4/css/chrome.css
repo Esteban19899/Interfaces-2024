@@ -1,0 +1,421 @@
+/* ╔══════━━━━━━────── • HEADER • ──────━━━━━━══════╗ */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.01);
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+
+    display: flex;
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .hamburger {
+            cursor: pointer;
+            width: 34px;
+            height: 27px;
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+
+        img {
+            position: absolute;
+
+            object-fit: contain;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0px;
+            width: auto;
+            height: 360px;
+        }
+
+        button {
+            position: absolute;
+            top: 20%;
+            right: 0px;
+            background-color: #83C252;
+            color: white;
+            width: 200px;
+            height: 50%;
+            border-radius: 111px;
+            border: 0;
+            outline: 8px solid white;
+            font-size: 20px;
+            font-weight: 900;
+            -webkit-text-stroke: 1px white;
+            cursor: pointer;
+            box-shadow: 4px 5px 0px 8px #02187E;
+        }
+    }
+}
+
+.button-shine {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button-shine::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 120%;
+    top: 50%;
+    left: -25px;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    filter: blur(2px);
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.button-shine:hover::after {
+    animation: button-shine-dash 0.7s ease;
+    opacity: 1;
+}
+
+.button-shine:active {
+    background-color: #64943f;
+    color: #bebebe;
+    -webkit-text-stroke: 1px #bebebe;
+}
+
+.button-shine:hover {
+    background-color: #90d332;
+}
+
+@keyframes button-shine-dash {
+    0% {
+        left: -25px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+.line {
+    height: 4px;
+    border-radius: 111px;
+    background-color: #F39E46;
+    outline: 4px solid white;
+    box-shadow: 4px 5px 0 4px #02187E;
+    margin-bottom: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .line:nth-child(1) {
+    animation: line1ToX 0.3s forwards;
+}
+
+.hamburger.active .line:nth-child(2) {
+    animation: line2ToX 0.3s forwards;
+}
+
+.hamburger.active .line:nth-child(3) {
+    animation: line3ToX 0.3s forwards;
+}
+
+.hamburger .line:nth-child(1) {
+    animation: line1ToHamburger 0.3s forwards;
+}
+
+.hamburger .line:nth-child(2) {
+    animation: line2ToHamburger 0.3s forwards;
+}
+
+.hamburger .line:nth-child(3) {
+    animation: line3ToHamburger 0.3s forwards;
+}
+
+@keyframes line1ToX {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translateY(11px) rotate(45deg);
+        box-shadow: 4px 0px 0 4px #02187E;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+@keyframes line2ToX {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes line3ToX {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-11px) rotate(-45deg);
+        box-shadow: 0px 4px 0 4px #02187E;
+    }
+}
+
+@keyframes line1ToHamburger {
+    0% {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes line2ToHamburger {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes line3ToHamburger {
+    0% {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* ╔══════━━━━━━────── • ASIDE • ──────━━━━━━══════╗ */
+
+/* Sidebar */
+#sidebar {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out, max-height 0.9s ease-in-out;
+    width: 200px;
+    top: 100%;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 10px;
+    pointer-events: none;
+
+}
+
+#sidebar-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar-container ul li {
+    padding: 10px;
+    color: #fff;
+    opacity: 0;
+    /* Los items comienzan invisibles */
+    transform: translateX(-100%);
+    /* Los items están fuera de la pantalla */
+    animation: slideIn 0.5s ease-out forwards;
+    /* Animación de deslizamiento */
+}
+
+#sidebar-container ul li a {
+    color: #f0f0f0;
+    /* Gris muy claro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 1px 1px 3px black, 0 0 50px red, 0 0 10px darkorange;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* Efecto de zoom cuando el mouse está sobre el enlace */
+#sidebar-container ul li a:hover {
+    transform: scale(1.2);
+}
+
+/* Animación para cada item */
+#sidebar-container ul li:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+#sidebar-container ul li:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+#sidebar-container ul li:nth-child(3) {
+    animation-delay: 1s;
+}
+
+#sidebar-container ul li:nth-child(4) {
+    animation-delay: 1.3s;
+}
+
+#sidebar-container ul li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+#sidebar-container ul li:nth-child(6) {
+    animation-delay: 1.9s;
+}
+
+#sidebar.active {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Animación de los ítems */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ╔══════━━━━━━────── • FOOTER • ──────━━━━━━══════╗ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 595px;
+    justify-content: center;
+    background-color: #5E5E5D;
+    position: relative;
+}
+
+#gaming-platforms-container {
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+
+    #gaming-platforms {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#footer-container {
+    height: 515px;
+    max-width: 1080px;
+    width: 100%;
+    color: white;
+    padding: 35px 0px;
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        max-width: 820px;
+        padding-bottom: 20px;
+    }
+
+    .policy {
+        padding-bottom: 31px;
+    }
+
+    a {
+        color: white;
+    }
+
+}
+
+.sprite1 {
+    position: absolute;
+    bottom: -165px;
+    width: 480px;
+    height: 480px;
+    background: url(../img/1sprite.png);
+    animation: play1 0.6s steps(15) infinite;
+    transform: scale(45%)
+}
+
+@keyframes play1 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -7200px;
+    }
+}
+
+.sprite4 {
+    position: absolute;
+    left: -120px;
+    bottom: -135px;
+    width: 480px;
+    height: 480px;
+    background: url(../img/4sprite.png);
+    animation: play4 5s steps(64) infinite;
+    transform: scale(50%)
+}
+
+@keyframes play4 {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: -30720px;
+    }
+
+    100% {
+        background-position: -30720px;
+    }
+}
+
+.sprite9 {
+    position: absolute;
+    right: 60px;
+    bottom: 33px;
+    width: 270px;
+    height: 270px;
+    background: url(../img/9sprite.png);
+    animation: play9 1.5s steps(24) infinite;
+    transform: scale(150%)
+}
+
+@keyframes play9 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -6480px;
+    }
+}

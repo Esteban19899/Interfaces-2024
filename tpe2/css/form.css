@@ -1,0 +1,151 @@
+/*╔══════━━━━━━────── • FORM • ──────━━━━━━══════╗*/
+
+.form-wrapped {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto; 
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: var(--sec_500);
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding: 0px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.google-btn, .facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.google-btn {
+    background-color: white;
+    color: #555;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.google-btn:hover {
+    background-color: #e2e0e0; 
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.facebook-btn:hover {
+    background-color: #354f87; 
+}
+
+.sec-btn {
+    background-color: var(--sec_400);
+    color: var(--pri_500);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 20px;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.sec-btn:hover {
+    color: var(--pri_300)
+}
+
+.registration-form, .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-wrapped input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-family: 'Nunito';
+}
+
+.form-wrapped input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: var(--pri_500);;
+    color: var(--sec_800);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+}
+
+.submit-btn:hover {
+    background-color: var(--pri_300);;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0; 
+    font-size: 14px; 
+    position: relative; 
+    color: var(--pri_500);
+}
+
+.divider:before, .divider:after {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    width: 40%; 
+    height: 1px; 
+    background-color: var(--pri_500); 
+}
+
+.divider:before {
+    left: 0; 
+}
+
+.divider:after {
+    right: 0;
+}

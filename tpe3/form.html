@@ -1,0 +1,58 @@
+<div class="form-wrapped">
+    <!-- Formulario para iniciar sesion -->
+    <div class="form-container">
+        <div class="social-login">
+            <button class="google-btn">
+                <img src="img/svg/google.svg" alt="Google" class="social-icon"> Continuar con Google
+            </button>
+            <button class="facebook-btn">
+                <img src="img/svg/facebook.svg" alt="Facebook" class="social-icon"> Continuar con Facebook
+            </button>
+        </div>
+
+        <button id="login-form" class="sec-btn toggle-form">Deseo registrarme</button>
+
+        <div class="divider">O también</div>
+
+        <form class="login-form">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="password" placeholder="Contraseña">
+        </form>
+        <div class="sub-btn-container">
+            <button class="submit-btn button link await-animation" data-url="home.html">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Formulario de registro -->
+    <div class="form-container form-active">
+        <div class="social-login">
+            <button class="google-btn">
+                <img src="img/svg/google.svg" alt="Google" class="social-icon"> Continuar con Google
+            </button>
+            <button class="facebook-btn">
+                <img src="img/svg/facebook.svg" alt="Facebook" class="social-icon"> Continuar con Facebook
+            </button>
+        </div>
+        <button id="register-form" class="sec-btn toggle-form">Ya tengo mi cuenta</button>
+
+        <div class="divider">O también</div>
+
+        <form class="registration-form">
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="text" name="username" placeholder="Usuario (visible para los demás)">
+            <input type="number" name="age" placeholder="Edad">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="password" placeholder="Contraseña">
+            <input type="password" name="confirm_password" placeholder="Repetí tu contraseña">
+            <div class="captcha">
+                <div id="recaptcha-container" class="g-recaptcha"
+                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+            </div>
+        </form>
+        <div class="sub-btn-container">
+            <button id="register" class="submit-btn button link await-animation" data-url="home.html">
+                Registrarse
+            </button>
+        </div>
+    </div>
+</div>

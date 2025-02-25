@@ -1,0 +1,361 @@
+:root {
+
+    /*╔══════━━━━━━────── • VARIABLES • ──────━━━━━━══════╗*/
+
+    /*Primary colors*/
+    --pri_200: #FFF9E5;
+    --pri_300: #FEE698;
+    --pri_400: #FDD34C;
+    --pri_500: #FFCC00;
+    --pri_600: #B08600;
+    --pri_700: #654D00;
+    --pri_800: #1A1400;
+
+    /*Secondary colors*/
+    --sec_200: #EDF1F7;
+    --sec_300: #AAB3C1;
+    --sec_400: #627086;
+    --sec_500: #243755;
+    --sec_600: #1A283E;
+    --sec_700: #111A28;
+    --sec_800: #080C12;
+
+    /*Accent colors*/
+    --acc_200: #E5FAFF;
+    --acc_300: #98ECFF;
+    --acc_400: #4CDEFF;
+    --acc_500: #00D0FF;
+    --acc_600: #0091B2;
+    --acc_700: #005366;
+    --acc_800: #00151A;
+
+    /*Extras*/
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    /*muchos settings aca son temporales*/
+    max-width: 100%;
+    font-family: 'Nunito', 'Lato', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--white);
+    margin: 0;
+    background-color: var(--sec_700);
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+button span {
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Simpsons';
+    src: url(../fonts/Simpsonfont.otf);
+}
+
+/*╔══════━━━━━━────── • BUTTONS • ──────━━━━━━══════╗*/
+
+/*-- Default Button --*/
+.button {
+    all: unset;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 24px 10px 24px;
+    background: var(--pri_500);
+    color: var(--black);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.6);
+}
+
+.button-tertiary {
+    all: unset;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--pri_500);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.button-tertiary:hover {
+    animation: tertiary 1s ease;
+}
+
+@keyframes tertiary {
+    0% {
+        rotation: 45deg;
+    }
+
+    100% {
+        rotation: 0;
+    }
+}
+
+.card-blackout .button-tertiary {
+    position: absolute;
+    left: 50%;
+    top: 66%;
+    translate: -50%;
+}
+
+/*-- button click animation --*/
+.button:active {
+    background-color: var(--pri_700);
+}
+
+/*-- cart button hover animation --*/
+.button-shine .button {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 100deg;
+    inherits: false;
+}
+
+@property --color {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+}
+
+.button-shine {
+    position: relative;
+    padding: 2px;
+}
+
+.button-shine::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 5px;
+    filter: blur(15px);
+}
+
+.button-shine .button::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 120%;
+    top: 50%;
+    left: -25px;
+    translate: -50% -50%;
+    rotate: -20deg;
+    filter: blur(2px);
+    background: var(--pri_300);
+}
+
+.button-shine:hover .button::after {
+    animation: 0.7s button-shine-dash ease;
+}
+
+.button-shine,
+.button-shine::after {
+    border-radius: 50px;
+    background-image: conic-gradient(from var(--angle), transparent 80%, var(--color));
+}
+
+.button-shine:hover::after,
+.button-shine:hover {
+    animation: 0.6s button-shine-spin ease;
+}
+
+@keyframes button-shine-dash {
+    0% {
+        left: -25px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes button-shine-spin {
+    0% {
+        --angle: 100deg;
+        --color: var(--pri_300);
+    }
+
+    70% {
+        --color: var(--pri_300);
+    }
+
+    100% {
+        --angle: 330deg;
+        --color: transparent;
+    }
+}
+
+/*-- play button hover animation --*/
+.button-play .button {
+    position: relative;
+    overflow: hidden;
+    transform-origin: left center;
+}
+
+.button-play .button:hover span {
+    display: block;
+    animation:
+        text-anticipation 0.5s ease,
+        text-spin 0.1s linear 0.5s 4,
+        text-spin 0.2s linear 0.9s 2,
+        text-end 0.3s ease 1.3s;
+}
+
+.button-play .button:hover {
+    animation: shake 1s linear;
+}
+
+@keyframes text-anticipation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-90%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes text-spin {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes text-end {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        rotate: 0deg;
+    }
+
+    6% {
+        rotate: -8deg;
+    }
+
+    20% {
+        rotate: -12deg;
+    }
+
+    22% {
+        rotate: -13deg;
+    }
+
+    34% {
+        rotate: -13deg;
+    }
+
+    36% {
+        rotate: 0deg;
+    }
+
+    40% {
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 0 10px;
+    }
+
+    55% {
+        translate: 0 -10px;
+    }
+
+    60% {
+        translate: 0 10px;
+    }
+
+    65% {
+        translate: 0 -5px;
+    }
+
+    70% {
+        translate: 0 5px;
+    }
+
+    80% {
+        translate: 0 2px;
+    }
+
+    90% {
+        translate: 0 -2px;
+    }
+
+    95% {
+        translate: 0 0;
+    }
+}
+
+/*╔══════━━━━━━────── • SCROLLBAR • ──────━━━━━━══════╗*/
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: var(--sec_800);
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--sec_400);
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sec_300);
+}
+
+/*╔══════━━━━━━────── • CANVAS • ──────━━━━━━══════╗*/
+#game-canvas {
+    display: none;
+    background-color: black;
+    image-rendering: pixelated;
+    height: 720px;
+}

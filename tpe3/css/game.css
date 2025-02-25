@@ -1,0 +1,352 @@
+.main-game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb-container {
+    margin: 20px 0 0 -120px;
+}
+
+
+.breadcrumb {
+    font-size: 16px;
+    color: var(--sec_300);
+}
+
+.game-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game-container {
+    width: 1280px;
+    position: relative;
+    image-rendering: pixelated;
+}
+
+.game-bar {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: var(--sec_600);
+}
+
+.game-bar-left {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.game-bar-right {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-info-container {
+    padding-left: 20px;
+}
+
+.game h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.star {
+    color: var(--pri_400);
+    font-size: 18px;
+}
+
+.star.empty {
+    color: var(--sec_300);
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.comments {
+    margin-top: 30px;
+    background-color: var(--sec_600);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.game h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.comment-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.input-gamers {
+    flex-grow: 1;
+    background-color: var(--sec_700);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.button-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.comment-content {
+    background-color: var(--sec_700);
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.comment-content h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.comment-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+button.icon-btn {
+    border: none;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button.icon-btn i {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    margin: 0 4px;
+}
+
+button.icon-btn:hover {
+    background-color: transparent;
+}
+
+button.icon-btn i:hover {
+    color: var(--sec_300)
+}
+
+.icon-text {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.link-game {
+    color: var(--pri_400);
+}
+
+/*╔══════━━━━━━────── • GAME MENU • ──────━━━━━━══════╗*/
+
+.game-section img {
+    width: 1280px;
+    height: 720px;
+}
+
+#play-game-button {
+    font-size: 40px;
+}
+
+#select-player-name,
+#select-ficha {
+    display: none;
+    position: relative;
+    height: 720px;
+}
+
+#play-game-card {
+    display: flex;
+    position: relative;
+    height: 720px;
+}
+
+.player-name-next,
+.ficha-next,
+.menu-form input {
+    all: unset;
+    width: 50%;
+}
+
+.menu-form input {
+    justify-items: center;
+    border-radius: 2px;
+    background-color: rgba(212, 159, 85, 0.5);
+}
+
+.menu-form input:hover {
+    color: var(--pri_300);
+}
+
+.player-name-next {
+    font-size: 50px;
+    margin-left: 30%;
+    transition: 0.2s ease;
+}
+
+.player-name-next:hover {
+    cursor: pointer;
+    color: var(--pri_300);
+    transition: 0.2s ease;
+}
+
+.ficha-next {
+    width: 150px;
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Simpsons';
+    color: #f3dc17;
+    transition: 0.2s ease;
+    left: 8%;
+    bottom: 7%;
+}
+
+.ficha-next:hover {
+    cursor: pointer;
+    color: var(--pri_300);
+    transition: 0.2s ease;
+}
+
+.menu-form-container {
+    position: absolute;
+    font-family: 'Simpsons';
+    font-size: 40px;
+    color: #f3dc17;
+    top: 40%;
+    left: 24%;
+}
+
+.img-ficha {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px 20px;
+    border-radius: 100px;
+    padding: 2px;
+}
+
+.fichas-container {
+    top: 0;
+    left: 20px;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 300px;
+    font-family: 'Simpsons';
+    color: red;
+    font-size: 12px;
+}
+
+.fichas-container h2 {
+    margin: 0 10px 10px 35px;
+    width: 100px;
+    height: 25px;
+}
+
+.fichas-container h2:first-child {
+    color: var(--acc_400);
+}
+
+.form-linea {
+    position: absolute;
+    left: 6%;
+    bottom: 20%;
+    font-family: 'Simpsons';
+    color: #f3dc17;
+}
+
+.form-linea span {
+    margin-right: 15px;
+}
+
+#select-ficha input[type="radio"] {
+    margin: 0;
+    opacity: 0;
+}
+
+.select-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 15px 20px;
+    cursor: pointer;
+}
+
+.radio-game {
+    translate: -50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline-offset: 3px;
+    outline: 3px solid #888888;
+}
+
+.select-input input:checked~.radio-game {
+    outline-color: var(--pri_400);
+    background: var(--pri_400);
+}
+
+#canvas-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    gap: 10px;
+}
+
+#canvas-buttons button {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.canvas-restart {
+    background-image: url('../img/4enlinea/restart.png');
+}
+
+.canvas-home {
+    background-image: url('../img/4enlinea/home.png');
+}

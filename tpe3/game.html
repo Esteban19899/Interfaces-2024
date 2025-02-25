@@ -1,0 +1,142 @@
+<main class="main-game-container">
+    <section class="breadcrumb-container">
+        <span class="breadcrumb">
+            <button class="icon-btn link" data-url="home.html">
+                <i class="fa-sharp fa-solid fa-house" data-url="home.html"></i>
+            </button>>  Mis Juegos  >  Multijugador  >  4 En Línea
+        </span>
+    </section>
+
+    <section class="game-section">
+        <div class="game-container">
+            
+            <div id="play-game-card">
+                <img id="game-img" src="img/4linea.png">
+
+                <div class="button-play">
+                    <button type="button" id="play-game-button" class="button play-game-button"><span>Play!</span></button>
+                </div>
+            </div>
+
+            <div id="select-player-name">
+                <div class="menu-form-container">
+                    <form id="player-form" class="menu-form" action="">
+                        <div>
+                            <label for="player1">player 1 name </label>
+                            <input type="text" name="player1" value="Milhouse">
+                        </div>
+                        <div>
+                            <label for="player2">player 2 name </label>
+                            <input type="text" name="player2" value="Bart">
+                        </div>
+                        <button class="player-name-next">Next!</button>
+                    </form>
+                </div>
+                <img src="./img/4enlinea/menu.png" alt="">
+            </div>
+
+            <div id="select-ficha">
+                <form id="form-linea" class="form-linea" action="">
+                    <label class="select-input" for="radio3">
+                        <input value="3" id="radio3" name="connect" type="radio"> 
+                        <span class="radio-game"></span> learn with 3
+                    </label>
+                    <label class="select-input" for="radio4">
+                        <input value="4" id="radio4" name="connect" type="radio" checked> 
+                        <span class="radio-game"></span> connect 4!
+                    </label>
+                    <label class="select-input" for="radio5">
+                        <input value="5" id="radio5" name="connect" type="radio"> 
+                        <span class="radio-game"></span> try with 5..
+                    </label>
+                    <label class="select-input" for="radio6">
+                        <input value="6" id="radio6" name="connect" type="radio"> 
+                        <span class="radio-game"></span> challenge 6!
+                    </label>
+                </form>
+                <div class="fichas-container">
+                    <h2 class="player-names">player1</h2>
+                    <h2 class="player-names">player2</h2>
+                    <img class="img-ficha" player-data="var(--acc_400)" id="ficha-1" src="./img/4enlinea/alf.png" alt="">
+                    <img class="img-ficha" player-data="red" id="ficha-2" src="./img/4enlinea/pals.png" alt="">
+                    <img class="img-ficha" player-data="var(--acc_400)" id="ficha-3" src="./img/4enlinea/hellfish.png" alt="">
+                    <img class="img-ficha" player-data="red" id="ficha-4" src="./img/4enlinea/itchy.png" alt="">
+                    <img class="img-ficha" player-data="var(--acc_400)" id="ficha-5" src="./img/4enlinea/duff.png" alt="">
+                    <img class="img-ficha" player-data="red" id="ficha-6" src="./img/4enlinea/donut.png" alt="">
+                </div>
+                <button class="ficha-next">Next!</button>
+                <img src="./img/4enlinea/fichas.png" alt="">
+            </div>
+
+            <audio id="track" src="./audio/simpsons.mp3" loop></audio>
+            <canvas id="game-canvas"></canvas>
+
+            <div id="canvas-buttons">
+                <button class="canvas-restart"></button>
+                <button class="canvas-home"></button>
+            </div>
+
+            <div class="game-bar">
+                <div class="game-bar-left">
+                    <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+                    <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+                    <button class="icon-btn"><i class="fa-solid fa-gamepad"></i></button>
+                </div>
+                <div class="game-bar-right">
+                    <div class="like-count">
+                    <button class="icon-btn"><i class="fa-regular fa-thumbs-up"></i><span class="icon-text">528</span></button>
+                    </div>
+                    <div class="dislike-count">
+                        <button class="icon-btn"><i class="fa-regular fa-thumbs-down"></i><span class="icon-text">432</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-info-container">
+            <h1>4 En Springfield</h1>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star empty">☆</span>
+            </div>
+            <p class="description">¡Prepárate para desafiar a tus amigos en un emocionante juego de estrategia y rapidez mental!
+                4 En Springfield es una versión vibrante y divertida del clásico juego "4 en linea", ambientada en el
+                icónico mundo de Springfield, donde los personajes más queridos de Los Simpson te acompañarán en esta aventura.</p>
+                <br>
+                <a class="link-game" href="">Ver trailer</a>
+                <br>
+                <br>
+                <a class="link-game" href="">Imagenes</a>
+        </div>
+    </section>
+
+    <section class="comments">
+        <h2>Instrucciones</h2>
+        <p>El objetivo es alinear cuatro en línea vertical, horizontal o diagonal antes que tu oponente. En cada turno,
+            los jugadores dejan caer una ficha en la columna que prefieran. Puedes formar una fila de cuatro en
+            horizontal, vertical o diagonal. ¡El primero en conseguirlo gana! Ahora empieza la partida y a divertirse.
+        </p>
+        <div class="comment-input">
+            <img src="img/avatar-user.png" alt="User avatar" class="avatar">
+            <input class="input-gamers" type="text" placeholder="Escribe un comentario...">
+            <button>Enviar</button>
+        </div>
+        <div class="comment">
+            <img src="img/Users.png" alt="User 1 avatar" class="avatar">
+            <div class="comment-content">
+                <h3>SuperFan</h3>
+                <p>¡Este juego es increíble! Me encanta la temática de los Simpsons.</p>
+            </div>
+        </div>
+        <div class="comment">
+            <img src="img/Users.png" alt="User 2 avatar" class="avatar">
+            <div class="comment-content">
+                <h3>GamePro</h3>
+                <p>La estrategia es clave en este juego. ¡No puedo dejar de jugarlo!</p>
+            </div>
+        </div>
+    </section>
+</main>

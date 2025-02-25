@@ -1,0 +1,15 @@
+{
+    "canvas-width": 320,
+    "canvas-height": 180,
+    "tile-width": 16,
+    "tile-height": 16,
+    "tile-spacing": 0,
+    "ficha-radio": 8,
+    "board-y": 26,
+    "border1-W": 10,
+    "border1-H": 18,
+    "border2-W": 14,
+    "border2-H": 23,
+    "border3-W": 12,
+    "border3-H": 20
+}

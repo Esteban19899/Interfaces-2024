@@ -1,0 +1,132 @@
+.card-section {
+    display: block;
+    margin: 10px 10px 10px 10px;
+}
+
+.card-row {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.card-section-title {
+    font-weight: normal;
+    margin: 0px 0px 0px 18px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card {
+    width: 140px;
+    height: 85px;
+    position: relative;
+    margin: 2px;
+}
+
+.card-img {
+    width: 140px;
+    height: 85px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-deco {
+    width: 85px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: var(--pri_300);
+    box-shadow: -2px -2px 3px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-price {
+    color: var(--sec_500);
+    font-size: 18px;
+    font-family: 'Lato';
+    font-weight: bold;
+    letter-spacing: 0.90px;
+}
+
+.card-blackout-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-blackout-container {
+    opacity: 1;
+    animation: card-blackout-visible 0.3s ease;
+}
+
+@keyframes card-blackout-visible {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-blackout {
+    width: 140px;
+    height: 85px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    text-wrap: nowrap;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.card-title {
+    padding: 4px 9px 4px 9px;
+    top: 0px;
+    position: absolute;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.card-hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .card-section {
+        margin: 30px;
+    }
+
+    .card {
+        width: 240px;
+        height: 150px;
+    }
+
+    .card-blackout {
+        width: 240px;
+        height: 150px;
+    }
+
+    .card-img {
+        width: 240px;
+        height: 150px;
+        object-fit: fill;
+    }
+}
