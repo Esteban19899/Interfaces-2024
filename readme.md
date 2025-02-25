@@ -5,5 +5,8 @@ Miembros:
 - Ricci, Braian
 - Sánchez Fiadone, Gonzalo Nicolás
 - Villanueva, Esteban Gabriel
-
-[Ingresar a la pagina de Numberblocks](https://braianricci.github.io/interfaces/tpe4/index.html)
+  
+[Diseño con Figma].(https://esteban19899.github.io/Interfaces-2024/tpe1)
+[Website Minijuegos].(https://esteban19899.github.io/Interfaces-2024/tpe2)
+[Videojuego con JS].(https://esteban19899.github.io/Interfaces-2024/tpe3)
+[Animaciones avanzadas](https://esteban19899.github.io/Interfaces-2024/tpe4)
